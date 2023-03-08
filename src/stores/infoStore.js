@@ -34,6 +34,23 @@ export const useInfoStore = defineStore('info', {
                 this.subVersion = 0
             }
         },
+
+        async saveSettings( settings )
+        {
+
+            let response = await Axios.post('/api/game/save', settings )
+                .catch( error => {
+                    console.log("didn't get stuff back");
+                })
+            let answer = response => JSON.parse( response );
+                
+            const resp = new Result( answer );
+            if(!resp.ok())
+                throw( error );
+            
+            //make sure I update state here
+                
+        }
         
     }
 })
