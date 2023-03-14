@@ -1,3 +1,9 @@
+# GITHUB
+
+https://github.com/pg23navpreet/Telemetry
+
+
+
 # Vue-App
 
 This vue app shows and fullfills the requirements for the first assignment:
@@ -36,5 +42,4 @@ npm run dev
 
 ## Navigation
 
-1. Navigate to MyPage using tha nav bar and enter student info (anything, arbitrary)
-2. Click submit, that shows the student infor just entered
+1. Dashboard shows the graphs
