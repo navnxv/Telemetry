@@ -42,11 +42,16 @@ import Controller from '@/plugins/controller'
     </main>
 
     <footer>
-        Copyright &copy; 2023 Scott Henshaw
+        Copyright &copy; 2023 Navpreet Singh
     </footer>
 
 </template>
 <style>
+
+    footer{
+        background-color: #404040;;
+        color: white;
+    }
 
     header {
         background: #404040;

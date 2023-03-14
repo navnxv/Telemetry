@@ -41,8 +41,7 @@ Copyright (c) 2018. Scott Henshaw, Kibble Online Inc. All Rights Reserved.
     .chart {
         /* display: block; */
         margin:2vw;
-        border: 1px solid black;
-        background-color: lightgray;
+        background-color: #404040;
         color: black;
         height: 78vh;
         width: 80vw;

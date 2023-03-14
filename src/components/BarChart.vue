@@ -99,6 +99,7 @@
         align-items:flex-start;
     }
 
+    
     .rows {
         flex-direction: row;
     }
@@ -116,5 +117,6 @@
         border: 1px solid black;
         box-shadow: 3px 4px 5px black;
         padding: 2px;
+        background-color: #4d4a4a;
     }
 </style>

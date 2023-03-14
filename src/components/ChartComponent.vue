@@ -89,12 +89,6 @@
 <template>
 
     <section class="component-style">  <!-- Just one main element per template -->
-        <div>{{ title }}</div>
-        <div>
-            <!-- Put your HTML template here-->
-            <slot></slot>
-        </div>
-        <button @click="doIt( event )">Do it!</button>
     </section>
 
 </template>
@@ -103,19 +97,8 @@
     Add "scoped" attribute to limit CSS to this component only <style scoped>
     styles that are specific to this component only, not sub-children
     */
-    .component-style {
-        display: flex;
-        flex-direction:row;
-        flex-wrap:wrap;
-        justify-content:space-evenly;
-        align-content: flex-start;
-        align-items:flex-start;
-    }
+   
 
-    .component-item {
-        flex-grow: inherit;
-        flex-shrink: inherit;
-        order: inherit;
-    }
+
 
 </style>

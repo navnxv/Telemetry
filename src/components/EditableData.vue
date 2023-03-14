@@ -60,17 +60,16 @@
     <section class="component outline">
 
         <form class="chart-data-element" @submit.prevent="save( editData )">
-            <label>Speed</label>
+            <label class="data">Speed</label>
             <input name="Delta-Time" type="number" v-model="this.editData.dt" />
-            <label>Speed</label>
-            <label>{{this.editData.dt}}</label>
+            <label class="data">X</label>
 
             <input name="X" type="number" v-model="editData.x" />
-            <label>Y</label>
+            <label class="data">Y</label>
             <input name="Y" type="number" v-model="editData.y" />
-            <label>Z</label>
+            <label class="data">Z</label>
             <input name="Z" type="number" v-model="editData.z" />
-            <label>Jump</label>
+            <label class="data">Jump</label>
             <input name="action" type="text" v-model="editData.action" >
         </form>
 
@@ -94,6 +93,10 @@
         align-items:flex-start;
     }
 
+    .data{
+        color: #DBA9FC;
+    }
+
     .rows {
         flex-direction: row;
     }
@@ -105,7 +108,6 @@
 
     .outline {
         margin: 1px;
-        border: 1px solid red;
         padding: 2px;
     }
 </style>

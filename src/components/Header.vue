@@ -29,7 +29,7 @@ Copyright (c) 2022-2023. Kibble Game Studios Inc. All Rights Reserved.
 <template>
 
     <section class="container left">
-        <img alt="GameLogo" class="logo" src="@/Images/pirate.png" @click="$router.push('/')"/>
+        <img alt="GameLogo" class="logo" src="@/Images/BlacPearl.png" @click="$router.push('/')"/>
         <div class="title item">
             <h1>{{ title }}</h1>
         </div>

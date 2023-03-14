@@ -54,9 +54,9 @@
     .menu-item{
         color: #DBA9FC;
     }
-
+d
     .menu-item:hover{
-        background-color: #404040;
+        background-color: #505050;
     }
 
 
