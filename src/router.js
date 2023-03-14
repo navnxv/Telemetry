@@ -11,26 +11,18 @@ const router = createRouter({
 
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [{
-            path:"/",
-            name:"Home",
-            component: () => import('@/routes/HomeView.vue'),
-            props: { name: "DemoApp"}
-        },{
-            path:"/about",
-            name:"About",
-            component: () => import('@/routes/AboutView.vue')
-        },{
-            path:"/info",
-            name:"Info",
-            component: () => import('@/routes/Vue3InfoView.vue')
-        },{
             path:"/mypage",
             name:"MyPage",
             component: () => import('@/routes/MyPage.vue')
         },{
-            path:"/chart",
+            path:"/",
             name:"Chart",
             component: () => import('@/routes/ChartView.vue')
+        },{
+            path:"/home",
+            name:"Home",
+            component: () => import('@/routes/HomeView.vue'),
+            props: { name: "DemoApp"}
         }
     ]
 });

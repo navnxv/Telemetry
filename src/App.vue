@@ -31,9 +31,7 @@ import Controller from '@/plugins/controller'
 <template>
 
     <header class="wrapper container columns">
-        <VFSHeader title="Telemetry Viewer" subtitle="Team Project">
-            <div> My real content </div>
-        </VFSHeader>
+        <VFSHeader title="Telemetry Viewer" subtitle="Team Project"/>
         <VFSNavbar />
     </header>
     <main>
@@ -51,13 +49,14 @@ import Controller from '@/plugins/controller'
 <style>
 
     header {
-        background: lightblue;
+        background: #404040;
         color: black;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         box-shadow: 0 4px 5px -5px #222;
         width: 100vw;
+        color: White;
     }
 
     main {

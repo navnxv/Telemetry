@@ -16,11 +16,7 @@
             super( name, subComponentList )
             this.vm = {
                 navMenu:[
-                    { path:"/", section: "Home" },
-                    { path:"/about", section: "About" },
-                    { path:"/info", section: "Info" },
-                    { path:"/mypage", section: "MyPage" },
-                    { path:"/chart", section: "Chart" }                        
+                    { path:"/", section: "Dashboard" },
 
                 ]
             }
@@ -46,44 +42,22 @@
 </template>
 <style scoped>
     /* navigation bar */
-    li {
-        display: inline-block;
-        list-style: none;
-    }
-
-    nav {
-        background: var(--medium);
+    nav{
         width: 100%;
+        background-color: #404040;
     }
 
-    nav a.router-link-exact-active {
-        color: var(--color-text);
-        font-weight: 700;
+    ul {
+        background-color: #404040;
     }
 
-    nav a.router-link-exact-active:hover {
-        background-color: transparent;
+    .menu-item{
+        color: #DBA9FC;
     }
 
-    nav a {
-        display: inline-block;
-        padding: 0 1rem;
-        border-left: 1px solid var(--color-border);
+    .menu-item:hover{
+        background-color: #404040;
     }
 
-    nav a:first-of-type {
-        border: 0;
-    }
 
-    .menu {
-        align-content: flex-start;
-        flex-direction: row;
-        background: rgba(0, 0, 0, 0);
-    }
-
-    .navbar {
-        /* background: #D10034; */
-        justify-content: space-between;
-        box-shadow: 0 4px 5px -5px #222;
-    }
 </style>

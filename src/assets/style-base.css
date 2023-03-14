@@ -4,11 +4,11 @@
     --map-height: 480px;
     --map-width: 1600px;
 
-    --none: #B6CCF0;
-    --light: #99ACC9;
-    --highlight: #ACC1E3;
-    --medium: #7C8BA3;
-    --dark: #4E5766;
+    --none: #404040;
+    --light: #404040;
+    --highlight: #404040;
+    --medium: #404040;
+    --dark: #404040;
 }
 
 .none { color: var(--none); }
