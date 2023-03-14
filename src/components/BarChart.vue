@@ -99,6 +99,10 @@
         align-items:flex-start;
     }
 
+    #chart-area{
+        background-color: #ffffff;
+    }
+
     
     .rows {
         flex-direction: row;
@@ -114,7 +118,6 @@
     .outline {
         margin: 2px;
         margin-bottom: 4px;
-        border: 1px solid black;
         box-shadow: 3px 4px 5px black;
         padding: 2px;
         background-color: #4d4a4a;
