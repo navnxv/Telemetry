@@ -1,4 +1,8 @@
 <script setup>
+
+import { useInfoStore } from '@/stores/infoStore'
+
+const infoStore = useInfoStore();
 defineProps({
   msg: {
     required: true
@@ -13,6 +17,7 @@ defineProps({
     <nav>
         <RouterLink to="/" class="link">Dashboard</RouterLink>
     </nav>
+    <button class="button" @click="infoStore.pingFireBase()">Click me</button>
   </div>
 </template>
 
@@ -39,8 +44,16 @@ nav {
 }
 
 .link{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%; 
+  height: 70px;
   padding-left: 40px;
-  height: 50px;
-  width: 100%;
+}
+
+.link:hover{
+  background-color: #e9f1e2;;
 }
 </style>
