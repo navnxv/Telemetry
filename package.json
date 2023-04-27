@@ -1,34 +1,27 @@
 {
-  "name": "vfs-vue-template",
+  "name": "telemetryapp",
   "version": "0.0.0",
-  "type": "module",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "server": "cd server && nodemon --inspect ./server.js && cd .."
+    "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.3.4",
-    "chart.js": "^4.2.0",
+    "axios": "^1.3.5",
+    "chartjs": "^0.3.24",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "fs-extra": "^11.1.0",
-    "http": "^0.0.1-security",
-    "nodemon": "^2.0.21",
-    "path": "^0.12.7",
-    "pinia": "^2.0.28",
-    "vue": "^3.2.45",
-    "vue-chartjs": "^5.2.0",
+    "firebase": "^9.19.1",
+    "fusion": "^1.0.0-beta",
+    "jscharting": "^3.4.0",
+    "pinia": "^2.0.35",
+    "vue": "^3.2.47",
     "vue-google-charts": "^1.1.0",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
-    "@vue/test-utils": "^2.2.6",
-    "jsdom": "^20.0.3",
-    "vite": "^4.0.0",
-    "vitest": "^0.25.6"
+    "jscharting-vue": "^2.4.0",
+    "vite": "^4.1.4"
   }
 }

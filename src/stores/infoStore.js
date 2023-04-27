@@ -1,8 +1,20 @@
-/*
-Pinia Data Store.
-Copyright (c) 2023. Scott Henshaw, Kibble Game Studios Inc. All Rights Reserved.
-*/
+
+import axios from 'axios';
 import { defineStore } from 'pinia'
+
+import {getFunctions, connectFunctionsEmulator} from "firebase/functions";
+// const functions = getFunctions(getApp())
+// connectFunctionsEmulator(functions,"localhost", 5001)
+axios("localhost:5001", {
+    methog:'GET', 
+    mode:'no-cors',
+    headers:{
+        'Access-Control-Allow-Origin':'*',
+        'Content-Type':'application/json'
+    }
+})
+
+
 
 export const useInfoStore = defineStore('info', {
 
@@ -10,10 +22,12 @@ export const useInfoStore = defineStore('info', {
         mainVersion: 0,
         subVersion: 0,
         today: new Date(),
+        development: true,
+
     }),
 
     getters: {
-        name: state => { return "PG Student Evaluation System" },
+        name: state => { return "Final Project" },
         version: state => {
 
             const month = state.today.getUTCMonth() + 1;  // Jan = 0
@@ -35,22 +49,19 @@ export const useInfoStore = defineStore('info', {
             }
         },
 
-        async saveSettings( settings )
-        {
+        pingFireBase(){
 
-            let response = await Axios.post('/api/game/save', settings )
-                .catch( error => {
-                    console.log("didn't get stuff back");
-                })
-            let answer = response => JSON.parse( response );
-                
-            const resp = new Result( answer );
-            if(!resp.ok())
-                throw( error );
+            let server = "https://us-central1-telemetryfp.cloudfunctions.net/helloworld";
             
-            //make sure I update state here
-                
+            if (this.development)
+                server = "http://127.0.0.1:4000"
+
+
+            axios.post(`${server}/helloworld`, {})
+                .then( response => {
+
+                    console.log(response);
+                });
         }
-        
     }
 })

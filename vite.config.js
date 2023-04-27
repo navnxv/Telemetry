@@ -10,5 +10,16 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  optimizeDeps: {
+    exclude: [
+      'firebase',
+      'firebase/app',
+      'firebase/auth',
+      'firebase/firestore',
+      'firebase/analytics',
+      'firebase/storage'
+    ]
+  },
 })
+

@@ -1,29 +1,32 @@
-# GITHUB
+# PG23 T4 Cloud Computing  - Cloud Prepped ***
+---------------------------------------
+<Author: Navpreet Singh>
+<Date: March 15th>
 
-https://github.com/pg23navpreet/Telemetry
+<Description: Telemetry App>
+
+[demo] (https://github.com/pg23navpreet/Telemetry)
 
 
-## Recommended IDE Setup
+# Download/Install
+---------------------------------------
+Open the project on VS Code and run on the terminal by typing:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-Assuming you have node.js installed, run in terminal
 ```sh
 npm install
 ```
 
-## Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
 ```
 
-## Navigation
 
-1. Dashboard shows the graphs
+# *** How to use ***
+---------------------------------------
+<Instructions: Navigate to the Dashboard page to see all the charts>
+<Instructions: Navigate to the Movement page to change movement variables>
+
+
+# Caveats (optional)
+---------------------------------------

@@ -1,63 +1,46 @@
-<!--
-<VFSNavbar />
-@copyright (c) 2022-2023. Kibble Game Studios Inc. All Rights Reserved.
--->
-<script>
-    import { RouterLink, RouterView } from 'vue-router'
-
-    import Controller from '@/plugins/controller'
-
-    import { useInfoStore } from '@/stores/infoStore.js'
-    import { useModelStore } from '@/stores/sampleStore.js'
-
-    class NavbarController extends Controller {
-
-        constructor( name, subComponentList = []) {
-            super( name, subComponentList )
-            this.vm = {
-                navMenu:[
-                    { path:"/", section: "Dashboard" },
-
-                ]
-            }
-
-            this.injectStore( useInfoStore )
-                .injectStore( useModelStore )
-        }
-    }
-
-    export default new NavbarController('VFSNavbar');
-
+<script setup>
+defineProps({
+  msg: {
+    required: true
+  }
+})
 </script>
+
 <template>
-
-    <nav class="navbar">
-        <ul class="menu">
-            <li v-for="(item, i) in navMenu" :key="i">
-                <router-link :to="item.path" class="menu-item">{{ item.section }}</router-link>
-            </li>
-        </ul>
+  <div class="nav-container">
+    <img src="../assets/Images/brokenTree.png" width="100" height="100">
+    <h1 class="title">OOA</h1>
+    <nav>
+        <RouterLink to="/" class="link">Dashboard</RouterLink>
     </nav>
-
+  </div>
 </template>
+
 <style scoped>
-    /* navigation bar */
-    nav{
-        width: 100%;
-        background-color: #404040;
-    }
 
-    ul {
-        background-color: #404040;
-    }
+.nav-container{
+  width:100%;
+}
 
-    .menu-item{
-        color: #DBA9FC;
-    }
-d
-    .menu-item:hover{
-        background-color: #505050;
-    }
+h1 {
+  font-size: 50px;
+}
 
+h3 {
+  font-size: 1.2rem;
+}
 
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.link{
+  padding-left: 40px;
+  height: 50px;
+  width: 100%;
+}
 </style>

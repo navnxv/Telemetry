@@ -2,14 +2,11 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
-import router from './router.js'
+import router from './router'
+import cors from 'cors'
+import './assets/main.css'
 
-// import './assets/main.css'
 
-import '@/assets/style-base.css'
-import '@/assets/style-grid.css'
-import '@/assets/style-flex.css'
-import '@/assets/style-menu.css'
 
 class Main {
 
