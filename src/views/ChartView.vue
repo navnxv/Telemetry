@@ -14,11 +14,5 @@ const infoStore = useInfoStore();
 </template>
 
 <style>
-  main {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-content: space-evenly;
-    margin-left: 20%;
-  }
+  
 </style>

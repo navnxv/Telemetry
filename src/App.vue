@@ -1,8 +1,7 @@
 
 <script setup>
-import navBar from './components/navBar.vue'
-
-
+import navBar from './components/Navbar.vue'
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
@@ -10,7 +9,7 @@ import navBar from './components/navBar.vue'
     <navBar msg="00A"/>
   </div>
 
-  <RouterView width="80%"/>
+  <RouterView/>
 </template>
 
 <style scoped>

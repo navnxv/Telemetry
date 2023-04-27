@@ -1,6 +1,7 @@
 <script setup>
 
 import { useInfoStore } from '@/stores/infoStore'
+import { RouterLink, RouterView } from 'vue-router'
 
 const infoStore = useInfoStore();
 defineProps({
@@ -16,6 +17,8 @@ defineProps({
     <h1 class="title">OOA</h1>
     <nav>
         <RouterLink to="/" class="link">Dashboard</RouterLink>
+        <RouterLink to="/movement" class="link">Player</RouterLink>
+        <RouterLink to="/enemy" class="link">Enemy</RouterLink>
     </nav>
     <button class="button" @click="infoStore.pingFireBase()">Click me</button>
   </div>
