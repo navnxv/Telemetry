@@ -19,5 +19,6 @@ const infoStore = useInfoStore();
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-content: space-evenly;
+    margin-left: 20%;
   }
 </style>

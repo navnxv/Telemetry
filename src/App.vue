@@ -21,7 +21,7 @@ import navBar from './components/navBar.vue'
   background-color: #c8f0a2;
   width:20%;
   height: 1000px;
-  position: absolute;
+  position: fixed;
   overflow: auto;
 }
 
@@ -40,9 +40,5 @@ img{
   height: 100px;
 }
 
-
-nav :hover {
-  background-color: #fafffa;
-}
 
 </style>

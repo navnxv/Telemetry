@@ -2,13 +2,13 @@
 
     import { defineComponent, h } from 'vue';
     import { GChart } from 'vue-google-charts';
-    import { useTelemetryStore } from '../../stores/telemetryStore.js';
+    //import { useTelemetryStore } from '../../stores/telemetryStore.js';
 
     
     export const type = 'ColumnChart';
 
-    const telemetryStore = useTelemetryStore();
-    let count = telemetryStore.recordCount;
+    //const telemetryStore = useTelemetryStore();
+    //let count = telemetryStore.recordCount;
     export const data = [
         ['Year', 'Billions'],
         ['2017', 2.33],

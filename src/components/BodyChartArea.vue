@@ -62,9 +62,10 @@ import ComboChart from './charts/ComboChart.vue'
 .all-charts{
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 1rem; 
-  width: 80%;
+  width: 100%;
+  margin-top: 5%;
 }
 
 </style>

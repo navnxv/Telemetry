@@ -1,24 +1,24 @@
-/*Copyright (c) 2023. Mercedes Senties, All Rights Reserved*/
+// /*Copyright (c) 2023. Mercedes Senties, All Rights Reserved*/
 
-export default class CloudService {
+// export default class CloudService {
 
-    constructor() {
+//     constructor() {
 
-    }
+//     }
 
-    connect() {
-        //used to connect with remote service
-    }
+//     connect() {
+//         //used to connect with remote service
+//     }
 
-    save() {
-        //override to support CloudService save of record/struct
-    }
+//     save() {
+//         //override to support CloudService save of record/struct
+//     }
 
-    load() {
-        //overload to upload a single record back to the service
-    }
+//     load() {
+//         //overload to upload a single record back to the service
+//     }
 
-    loadAll() {
-        //overload to use the CloudService to fetch a list of things
-    }
-}
+//     loadAll() {
+//         //overload to use the CloudService to fetch a list of things
+//     }
+// }
