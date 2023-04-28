@@ -3,7 +3,6 @@ import axios from 'axios';
 import { defineStore } from 'pinia'
 import { getApp } from 'firebase/app';
 import { getFunctions, connectFunctionsEmulator } from 'firebase/functions'
-import firebaseAPI from '@/stores/firebase.js';
 import { initializeApp } from 'firebase/app';
 // const firebaseConfig = { apiKey: "AIzaSyDkAyP70-ee-nxfiKcuEIhRvyQDjLtEMu8",
 //         authDomain: "telemetryfp.firebaseapp.com",
@@ -81,7 +80,6 @@ export const useInfoStore = defineStore('info', {
             //         console.log(response);
             //     });
             
-            console.log(this.newData);
             try {
                 const response = await firebaseAPI.post('/user.json', { value: "tototo" });
                 console.log('Data added:', response);

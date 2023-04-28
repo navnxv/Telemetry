@@ -1,4 +1,4 @@
-// /*Copyright (c) 2023. Mercedes Senties, All Rights Reserved*/
+
 
 // import CloudService from "./CloudService";
 // // Import the functions you need from the SDKs you need

@@ -1,4 +1,3 @@
-// /*Copyright (c) 2023. Mercedes Senties, All Rights Reserved*/
 
 // export default class CloudService {
 
