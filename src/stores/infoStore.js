@@ -4,34 +4,22 @@ import { defineStore } from 'pinia'
 import { getApp } from 'firebase/app';
 import { getFunctions, connectFunctionsEmulator } from 'firebase/functions'
 import { initializeApp } from 'firebase/app';
-// const firebaseConfig = { apiKey: "AIzaSyDkAyP70-ee-nxfiKcuEIhRvyQDjLtEMu8",
-//         authDomain: "telemetryfp.firebaseapp.com",
-//         databaseURL: "https://telemetryfp-default-rtdb.firebaseio.com",
-//         projectId: "telemetryfp",
-//         storageBucket: "telemetryfp.appspot.com",
-//         messagingSenderId: "755632942749",
-//         appId: "1:755632942749:web:27e70ea38c0a2754432e74",
-//         measurementId: "G-F066CM01NV"
-//     };
-// initializeApp(firebaseConfig);
+import { getAnalytics } from "firebase/analytics";
 
+const firebaseConfig = {
+    apiKey: "AIzaSyDkAyP70-ee-nxfiKcuEIhRvyQDjLtEMu8",
+    authDomain: "telemetryfp.firebaseapp.com",
+    databaseURL: "https://telemetryfp-default-rtdb.firebaseio.com",
+    projectId: "telemetryfp",
+    storageBucket: "telemetryfp.appspot.com",
+    messagingSenderId: "755632942749",
+    appId: "1:755632942749:web:27e70ea38c0a2754432e74",
+    measurementId: "G-F066CM01NV"
+  };
 
-
-// const functions = getFunctions(getApp())
-// connectFunctionsEmulator(functions,"localhost", 5001)
-// axios("localhost:5001", {
-//     methog:'GET', 
-//     headers:{
-//         'Content-Type':'application/json'
-//     }
-// }).then(response => {
-//     console.log(response.data);
-//   })
-//   .catch(error => {
-//     console.error(error);
-//   });
-
-
+const app = initializeApp(firebaseConfig);
+const functions = getFunctions(getApp());
+connectFunctionsEmulator(functions, "localhost", 5001);
 
 export const useInfoStore = defineStore('info', {
 
@@ -67,26 +55,16 @@ export const useInfoStore = defineStore('info', {
         },
 
         async pingFireBase(){
-            // console.log("Getting here");
-            // let server = "https://us-central1-telemetryfp.cloudfunctions.net/helloworld";
-            
-            // if (this.development)
-            //     server = "http://127.0.0.1:4000"
+            let server; 
+            if (this.development)
+                server = "http://127.0.0.1:5002/telemetryfp/us-central1"
 
 
-            // axios.post(`${server}/helloworld`, {})
-            //     .then( response => {
+            axios.post(`${server}/helloWorld`, {})
+                .then( response => {
 
-            //         console.log(response);
-            //     });
-            
-            try {
-                const response = await firebaseAPI.post('/user.json', { value: "tototo" });
-                console.log('Data added:', response);
-            } catch (error) {
-                console.error('Error adding data:', error);
-            }
-            
+                    console.log(response);
+                });
         }
     }
 })
